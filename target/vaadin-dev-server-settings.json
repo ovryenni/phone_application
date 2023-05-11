@@ -1,0 +1,18 @@
+{
+  "frontendFolder": "/Users/ovryennipandiangan/Documents/life/learn/phone_application/./frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "/Users/ovryennipandiangan/Documents/life/learn/phone_application/./frontend/generated/jar-resources",
+  "staticOutput": "/Users/ovryennipandiangan/Documents/life/learn/phone_application/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "/Users/ovryennipandiangan/Documents/life/learn/phone_application/target/classes/META-INF/VAADIN/config",
+  "frontendBundleOutput": "/Users/ovryennipandiangan/Documents/life/learn/phone_application/target/classes/META-INF/VAADIN/webapp",
+  "devBundleOutput": "/Users/ovryennipandiangan/Documents/life/learn/phone_application/src/main/dev-bundle/webapp",
+  "devBundleStatsOutput": "/Users/ovryennipandiangan/Documents/life/learn/phone_application/src/main/dev-bundle/config",
+  "jarResourcesFolder": "/Users/ovryennipandiangan/Documents/life/learn/phone_application/./frontend/generated/jar-resources",
+  "generatedFlowImportsFolder": "target/frontend",
+  "themeName": "flowcrmtutorial",
+  "clientServiceWorkerSource": "/Users/ovryennipandiangan/Documents/life/learn/phone_application/target/sw.ts",
+  "pwaEnabled": false,
+  "offlineEnabled": false,
+  "offlinePath": "'offline.html'"
+}
