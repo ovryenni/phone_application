@@ -26,18 +26,17 @@ public class ListView extends VerticalLayout {
         Grid<Phone> grid = new Grid<>(Phone.class);
         TextField filterText = new TextField();
         PhoneForm form;
-//        RepositoryService service;
+        RepositoryService service;
 
-        public ListView() {
-//            this.service = service;
+        public ListView(RepositoryService service) {
+            this.service = service;
             addClassName("list-view");
             setSizeFull();
             configureGrid();
             configureForm();
 
-//            add(getToolbar(), getContent());
+            add(getToolbar(), getContent());
             updateList();
-            closeEditor();
         }
 
 
@@ -51,23 +50,16 @@ public class ListView extends VerticalLayout {
         }
 
         private void configureForm() {
-//            form = new PhoneForm(service.findAllPhone());
-//            form.setWidth("25em");
-//            form.addSaveListener(this::saveContact); // <1>
-//            form.addDeleteListener(this::deleteContact); // <2>
-//            form.addCloseListener(e -> closeEditor()); // <3>
+            form = new PhoneForm(service.findAllPhone());
+            form.setWidth("25em");
         }
 
         private void configureGrid() {
             grid.addClassNames("contact-grid");
             grid.setSizeFull();
-            grid.setColumns("id", "code", "name");
-//            grid.addColumn(contact -> contact.getStatus().getName()).setHeader("Status");
-//            grid.addColumn(contact -> contact.getCompany().getName()).setHeader("Company");
+            grid.setColumns("id", "code", "name", "brand","type", "description");
             grid.getColumns().forEach(col -> col.setAutoWidth(true));
 
-//            grid.asSingleSelect().addValueChangeListener(event ->
-//                    editContact(event.getValue()));
         }
 
         private Component getToolbar() {
@@ -76,7 +68,7 @@ public class ListView extends VerticalLayout {
             filterText.setValueChangeMode(ValueChangeMode.LAZY);
             filterText.addValueChangeListener(e -> updateList());
 
-            Button addContactButton = new Button("Add contact");
+            Button addContactButton = new Button("search");
             addContactButton.addClickListener(click -> addContact());
 
             var toolbar = new HorizontalLayout(filterText, addContactButton);
@@ -107,6 +99,7 @@ public class ListView extends VerticalLayout {
 
 
         private void updateList() {
-//            grid.setItems(service.findAllContacts(filterText.getValue()));
+            filterText.setValue("DUMMY");
+            grid.setItems(service.findAllContacts(filterText.getValue()));
         }
 }

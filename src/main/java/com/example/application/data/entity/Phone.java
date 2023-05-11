@@ -15,6 +15,7 @@ import lombok.Setter;
 public class Phone extends AbstractEntity{
     @NotEmpty
     private String code;
+
     private String name;
     private String category;
     private String brand;
